@@ -22,9 +22,10 @@ type GetUserInfoRes struct {
 func GetUserInfo(c *gin.Context) {
     req := GetUserInfoReq{}
     res := GetUserInfoRes{}
+    var err error
 
     for ok := true; ok; ok = false {
-        err := lib.ReadRequestBodyJson(c, &req)
+        err = lib.ReadRequestBodyJson(c, &req)
         if err != nil {
             fmt.Printf("解析错误: %s\n", err.Error())
             break
@@ -35,11 +36,11 @@ func GetUserInfo(c *gin.Context) {
             fmt.Println("查询错误: %s\n", err.Error())
             break
         }
-        lib.ServerResponse(c, 0, &res)
+        lib.ServerResponse(c, nil, &res)
     }
-    lib.ServerResponse(c, -1, nil)
+    lib.ServerResponse(c, err, nil)
 }
 
-func getUserInfo() error {
+func getUserInfo(req *GetUserInfoReq) error {
     return nil
 }

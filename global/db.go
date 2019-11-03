@@ -2,14 +2,12 @@ package global
 
 import (
     "fmt"
-    "strconv"
-    "sync"
 
     _ "github.com/go-sql-driver/mysql"
     "github.com/jinzhu/gorm"
 )
 
-var Glogic *gorm.DB = nil
+var GLogic *gorm.DB = nil
 
 func InitLogicDb() error {
     var err error
