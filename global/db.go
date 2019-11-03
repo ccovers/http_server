@@ -20,8 +20,8 @@ func InitLogicDb() error {
         GLogic.DB().SetMaxOpenConns(10)
         GLogic.DB().SetMaxIdleConns(3)
 
-        GLogic.LogMode(true)
-        //GLogic.SetLogger(clog.Logger)
+        // GLogic.LogMode(true)
+        // GLogic.SetLogger(clog.Logger)
         fmt.Println("初始化LogicDb成功")
     }
     return err

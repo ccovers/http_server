@@ -29,7 +29,7 @@ EXIT_PROCESS:
 }
 
 func startServer() {
-    gin.SetMode(gin.ReleaseMode)
+    // gin.SetMode(gin.ReleaseMode)
 
     // 注册一个默认的路由器
     engine := gin.Default()
