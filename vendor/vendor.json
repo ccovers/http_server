@@ -1,0 +1,43 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "bFAvbIxTFOA04MVNjuhcmenWwt0=",
+			"path": "lib/gin",
+			"revision": "15a8384c74004ceeaf79c62d9eeec59b8a63c28f",
+			"revisionTime": "2018-05-31T10:14:08Z"
+		},
+		{
+			"checksumSHA1": "SynqSjo9HIGGYVR7A9KbYHl3OpE=",
+			"path": "lib/gin/binding",
+			"revision": "15a8384c74004ceeaf79c62d9eeec59b8a63c28f",
+			"revisionTime": "2018-05-31T10:14:08Z"
+		},
+		{
+			"checksumSHA1": "s2UGRjbGk4Ydz6LDitpsLQ1mdzw=",
+			"path": "lib/gin/render",
+			"revision": "15a8384c74004ceeaf79c62d9eeec59b8a63c28f",
+			"revisionTime": "2018-05-31T10:14:08Z"
+		},
+		{
+			"checksumSHA1": "+amgGIviZ75qum/7B42ABoZHjYM=",
+			"path": "lib/go-colorable",
+			"revision": "8cca588ef944f359f3cb562495c0d7a94480ba21",
+			"revisionTime": "2018-03-16T06:39:18Z"
+		},
+		{
+			"checksumSHA1": "PTBIlqNLehjcdplzoD729rS0oG8=",
+			"path": "lib/go-isatty",
+			"revision": "0df0d0992cb73c37a02d9404f3a4df40d3cb3274",
+			"revisionTime": "2015-05-18T08:18:53Z"
+		},
+		{
+			"checksumSHA1": "BZTpof69FxsxWDvYJnlSb9tYkmk=",
+			"path": "lib/httprouter",
+			"revision": "6ab31338b6fe01c5b1b14d478333a9285fda638d",
+			"revisionTime": "2015-05-18T07:43:43Z"
+		}
+	],
+	"rootPath": "work/http_server"
+}
