@@ -38,6 +38,7 @@ func GetUserInfo(c *gin.Context) {
             break
         }
         lib.ServerResponse(c, nil, &res)
+        return
     }
     lib.ServerResponse(c, err, nil)
 }
