@@ -43,6 +43,7 @@ func registRouter(engine *gin.Engine) error {
     router := engine.Group("/v1")
     {
         router.POST("/get_user_info", logic.GetUserInfo)
+        router.GET("/get_user_info", logic.GetUserInfoEx)
     }
     return nil
 }
