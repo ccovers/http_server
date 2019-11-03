@@ -3,6 +3,7 @@ package logic
 import (
     "fmt"
 
+    "ccovers/http_server/global"
     "ccovers/http_server/lib"
 
     "github.com/gin-gonic/gin"
@@ -31,7 +32,7 @@ func GetUserInfo(c *gin.Context) {
             break
         }
 
-        err = getUserInfo(&req)
+        err = getUserInfo(&req, &res)
         if err != nil {
             fmt.Println("查询错误: %s\n", err.Error())
             break
@@ -41,6 +42,15 @@ func GetUserInfo(c *gin.Context) {
     lib.ServerResponse(c, err, nil)
 }
 
-func getUserInfo(req *GetUserInfoReq) error {
+func getUserInfo(req *GetUserInfoReq, res *GetUserInfoRes) error {
+    sql := fmt.Sprint(`
+        SELECT id AS user_id, student AS name, subject, score 
+        FROM school_table
+        WHERE id = %d;
+    `, req.UserId)
+    db := global.GLogic.Raw(sql).Scan(res)
+    if db.Error != nil {
+        return db.Error
+    }
     return nil
 }
