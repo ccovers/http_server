@@ -18,7 +18,7 @@ func GetUserInfoEx(c *gin.Context) {
         idStr := c.Param("userId")
         userId, err = strconv.ParseInt(idStr, 10, 64)
         if err != nil {
-            fmt.Printf("解析错误: %s\n", err.Error())
+            fmt.Printf("解析错误: %s, %s\n", idStr, err.Error())
             break
         }
 
