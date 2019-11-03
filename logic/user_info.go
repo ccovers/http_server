@@ -34,7 +34,7 @@ func GetUserInfo(c *gin.Context) {
 
         err = getUserInfo(&req, &res)
         if err != nil {
-            fmt.Println("查询错误: %s\n", err.Error())
+            fmt.Printf("查询错误: %s\n", err.Error())
             break
         }
         lib.ServerResponse(c, nil, &res)
@@ -43,7 +43,7 @@ func GetUserInfo(c *gin.Context) {
 }
 
 func getUserInfo(req *GetUserInfoReq, res *GetUserInfoRes) error {
-    sql := fmt.Sprint(`
+    sql := fmt.Sprintf(`
         SELECT id AS user_id, student AS name, subject, score 
         FROM school_table
         WHERE id = %d;
