@@ -15,7 +15,7 @@ func GetUserInfoEx(c *gin.Context) {
 
     for ok := true; ok; ok = false {
         var userId int64
-        idStr := c.Param("userId")
+        idStr := c.Query("userId")
         userId, err = strconv.ParseInt(idStr, 10, 64)
         if err != nil {
             fmt.Printf("解析错误: %s, %s\n", idStr, err.Error())
